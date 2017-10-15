@@ -1,0 +1,20 @@
+<resources>
+    <!-- from App -->
+    <string name="app_name">iClebo IR</string>
+    <!-- from Main Activity -->
+    <string name="main_power">Power</string>
+    <string name="main_start">Start</string>
+    <string name="main_mode">Mode</string>
+    <string name="main_clock">Clock</string>
+    <string name="main_timer">Timer</string>
+    <string name="main_base">Base</string>
+    <string name="main_climb">Climb</string>
+    <string name="main_spot">Spot</string>
+    <string name="main_max">Max</string>
+    <!-- from About Activity -->
+    <string name="about_title">О программе</string>
+    <string name="about_text">Привет ребят, это приложение написано для себя, здесь нет свистоперделок, оно просто выполняет свои функции.
+    Программа бесплатна и без рекламы, но если Вы хотите отблагодарить меня - это тоже можно:</string>
+    <string name="about_donate">На пиво</string>
+    <string name="about_rank">Оценить</string>
+</resources>

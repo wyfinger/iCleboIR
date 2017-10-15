@@ -1,0 +1,20 @@
+<resources>
+    <!-- from App -->
+    <string name="app_name">iClebo IR</string>
+    <!-- from Main Activity -->
+    <string name="main_power">Power</string>
+    <string name="main_start">Start</string>
+    <string name="main_mode">Mode</string>
+    <string name="main_clock">Clock</string>
+    <string name="main_timer">Timer</string>
+    <string name="main_base">Base</string>
+    <string name="main_climb">Climb</string>
+    <string name="main_spot">Spot</string>
+    <string name="main_max">Max</string>
+    <!-- from About Activity -->
+    <string name="about_title">그것에 대해</string>
+    <string name="about_text">이봐, 얘들 아,이 응용 프로그램 자체에 대한 서면, 그것은 중복되지 않습니다, 그냥 기능을 수행하고있어.
+    신청서는 무료이며 광고가 없지만 나에게 감사하고 싶다면 - 가능합니다:</string>
+    <string name="about_donate">기부 $1</string>
+    <string name="about_rank">평가 앱</string>
+</resources>

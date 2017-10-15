@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wyfinger.icleboir.MainActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:columnCount="3"
+        android:rowCount="8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/btnPower"
+            android:layout_width="100dp"
+            android:layout_height="65dp"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_margin="4dp"
+            android:text="@string/main_power"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:background="@drawable/button_style" />
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="100dp"
+            android:layout_height="65dp"
+            android:layout_column="2"
+            android:layout_margin="4dp"
+            android:layout_row="0"
+            android:text="@string/main_start"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:background="@drawable/button_style" />
+
+        <Button
+            android:id="@+id/btnUp"
+            android:layout_width="100dp"
+            android:layout_height="65dp"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:layout_margin="4dp"
+            android:text="@string/main_up"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:background="@drawable/button_style" />
+
+        <Button
+            android:id="@+id/btnLeft"
+            android:layout_width="100dp"
+            android:layout_height="65dp"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:layout_margin="4dp"
+            android:text="@string/main_left"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:background="@drawable/button_style" />
+
+        <Button
+            android:id="@+id/btnSelect"
+            android:layout_width="100dp"
+            android:layout_height="65dp"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:layout_margin="4dp"
+            android:text="@string/main_select"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:background="@drawable/button_style" />
+
+        <Button
+            android:id="@+id/btnRight"
+            android:layout_width="100dp"
+            android:layout_height="65dp"
+            android:layout_column="2"
+            android:layout_row="2"
+            android:layout_margin="4dp"
+            android:text="@string/main_right"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:background="@drawable/button_style" />
+
+        <Button
+            android:id="@+id/btnDown"
+            android:layout_width="100dp"
+            android:layout_height="65dp"
+            android:layout_column="1"
+            android:layout_row="3"
+            android:layout_margin="4dp"
+            android:text="@string/main_down"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:background="@drawable/button_style" />
+
+        <Button
+            android:id="@+id/btnMode"
+            android:layout_width="100dp"
+            android:layout_height="65dp"
+            android:layout_column="1"
+            android:layout_row="4"
+            android:layout_margin="4dp"
+            android:text="@string/main_mode"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:background="@drawable/button_style" />
+
+        <Button
+            android:id="@+id/btnClock"
+            android:layout_width="100dp"
+            android:layout_height="65dp"
+            android:layout_column="0"
+            android:layout_row="5"
+            android:layout_margin="4dp"
+            android:text="@string/main_clock"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:background="@drawable/button_style" />
+
+        <Button
+            android:id="@+id/btnTimer"
+            android:layout_width="100dp"
+            android:layout_height="65dp"
+            android:layout_column="2"
+            android:layout_row="5"
+            android:layout_margin="4dp"
+            android:text="@string/main_timer"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:background="@drawable/button_style" />
+
+        <Button
+            android:id="@+id/btnBase"
+            android:layout_width="100dp"
+            android:layout_height="65dp"
+            android:layout_column="0"
+            android:layout_row="6"
+            android:layout_margin="4dp"
+            android:text="@string/main_base"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:background="@drawable/button_style" />
+
+        <Button
+            android:id="@+id/btnClimb"
+            android:layout_width="100dp"
+            android:layout_height="65dp"
+            android:layout_column="2"
+            android:layout_row="6"
+            android:layout_margin="4dp"
+            android:text="@string/main_climb"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:background="@drawable/button_style" />
+
+        <Button
+            android:id="@+id/btnSpot"
+            android:layout_width="100dp"
+            android:layout_height="65dp"
+            android:layout_column="0"
+            android:layout_row="7"
+            android:layout_margin="4dp"
+            android:text="@string/main_spot"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:background="@drawable/button_style" />
+
+        <Button
+            android:id="@+id/btnMax"
+            android:layout_width="100dp"
+            android:layout_height="65dp"
+            android:layout_column="2"
+            android:layout_row="7"
+            android:layout_margin="4dp"
+            android:text="@string/main_max"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:background="@drawable/button_style" />
+    </GridLayout>
+
+</android.support.constraint.ConstraintLayout>

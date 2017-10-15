@@ -1,0 +1,26 @@
+<resources>
+    <!-- from App -->
+    <string name="app_name">iClebo IR</string>
+    <!-- from Main Activity -->
+    <string name="main_power">Power</string>
+    <string name="main_start">Start</string>
+    <string name="main_up" translatable="false">▲</string>
+    <string name="main_left" translatable="false">◄</string>
+    <string name="main_select" translatable="false">●</string>
+    <string name="main_right" translatable="false">►</string>
+    <string name="main_down" translatable="false">▼</string>
+    <string name="main_mode">Mode</string>
+    <string name="main_clock">Clock</string>
+    <string name="main_timer">Timer</string>
+    <string name="main_base">Base</string>
+    <string name="main_climb">Climb</string>
+    <string name="main_spot">Spot</string>
+    <string name="main_max">Max</string>
+    <!-- from About Activity -->
+    <string name="about_title">About this app</string>
+    <string name="about_text">Hey, guys, this app written for myself, it\'s not redundant, it\'s just performing its functions.
+    The app is free and without advertising, but if you want to thank me, you can:</string>
+    <string name="about_donate">Donate $1</string>
+    <string name="about_rank">Rank App</string>
+
+</resources>
