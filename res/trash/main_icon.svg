@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="529.16669mm"
+   height="529.16669mm"
+   viewBox="0 0 529.16669 529.16669"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="main_icon.svg">
+  <defs
+     id="defs2">
+    <filter
+       inkscape:menu="Morphology"
+       inkscape:menu-tooltip="Blurred multiple contours for objects"
+       y="-0.2"
+       x="-0.34"
+       width="1.6"
+       height="1.4"
+       inkscape:label="Contouring table"
+       style="color-interpolation-filters:sRGB"
+       id="filter4579">
+      <feFlood
+         result="result2"
+         flood-color="rgb(255,255,255)"
+         id="feFlood4557" />
+      <feGaussianBlur
+         result="result1"
+         in="SourceAlpha"
+         stdDeviation="17"
+         id="feGaussianBlur4559" />
+      <feComposite
+         in2="result1"
+         result="result17"
+         operator="in"
+         id="feComposite4561" />
+      <feComposite
+         in2="result2"
+         in="result17"
+         result="fbSourceGraphic"
+         operator="over"
+         id="feComposite4563" />
+      <feComponentTransfer
+         in="fbSourceGraphic"
+         result="result9"
+         id="feComponentTransfer4571">
+        <feFuncR
+           type="table"
+           tableValues="0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1"
+           id="feFuncR4565" />
+        <feFuncG
+           type="table"
+           tableValues="0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1"
+           id="feFuncG4567" />
+        <feFuncB
+           type="table"
+           tableValues="0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1"
+           id="feFuncB4569" />
+      </feComponentTransfer>
+      <feColorMatrix
+         result="result6"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -0.21 -0.72 -0.07 1 0 "
+         in="result9"
+         id="feColorMatrix4573" />
+      <feFlood
+         flood-color="rgb(128,128,128)"
+         result="result8"
+         id="feFlood4575" />
+      <feComposite
+         in2="result6"
+         result="result12"
+         operator="in"
+         id="feComposite4577" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="926.58679"
+     inkscape:cy="998.02903"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer3"
+     showgrid="false"
+     inkscape:window-width="1663"
+     inkscape:window-height="1012"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     borderlayer="true" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="фон робота"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(184.45239,127.84525)"
+     sodipodi:insensitive="true">
+    <circle
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:#8e84f0;stroke-width:1.89199996;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.63819095;filter:url(#filter4579)"
+       id="path4485"
+       cx="95.548859"
+       cy="34.407692"
+       r="18.307962" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="контур 1"
+     transform="translate(184.45239,127.84525)"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <image
+       sodipodi:absref="D:\Yandex.Disk\Dev\Android\iCleboIR\res\images/large.jpg"
+       xlink:href="images/large.jpg"
+       width="529.16669"
+       height="529.16669"
+       preserveAspectRatio="none"
+       id="image4594"
+       x="-182.18454"
+       y="-128.6012" />
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M -64.920202,41.667604 C -44.732154,24.554568 -3.0793371,0.78879009 68.127415,-3.6895373 140.2145,-7.9318098 207.25325,4.6207662 257.73389,47.848858 272.08125,64.575732 301.34778,100.20049 265.33927,146.5655 207.00635,205.59163 106.81126,224.77053 5.7803381,203.61696 -98.370448,176.86186 -145.51142,99.557187 -64.920202,41.667604 Z"
+       id="path4597"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="контур 2">
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:1.76499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 130.96207,175.56911 c 9.87277,-12.62711 116.29293,-39.66528 136.04017,-43.29766 17.37062,-1.11432 39.14761,5.51085 59.88738,10.31419 -1.40316,1.44016 -6.411,4.49973 -2.70188,4.28234 46.1679,18.29274 22.5842,8.10146 33.01405,10.92378 l 6.28478,-4.94056 c 21.42644,5.61879 43.56316,10.73023 55.32478,23.25245 10.256,17.60779 18.07529,73.85496 11.49258,91.94071 -20.23388,15.59353 -127.59216,56.82471 -152.61088,59.60112 -17.98212,1.46024 -160.35425,-54.72187 -164.37077,-69.22283 z"
+       id="path4600"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccc" />
+  </g>
+</svg>

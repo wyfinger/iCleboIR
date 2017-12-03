@@ -1,14 +1,9 @@
 <resources>
     <!-- from App -->
-    <string name="app_name">iClebo IR</string>
+    <string name="app_name">Robot IR Control</string>
     <!-- from Main Activity -->
     <string name="main_power">Power</string>
     <string name="main_start">Start</string>
-    <string name="main_up" translatable="false">▲</string>
-    <string name="main_left" translatable="false">◄</string>
-    <string name="main_select" translatable="false">●</string>
-    <string name="main_right" translatable="false">►</string>
-    <string name="main_down" translatable="false">▼</string>
     <string name="main_mode">Mode</string>
     <string name="main_clock">Clock</string>
     <string name="main_timer">Timer</string>
@@ -19,8 +14,9 @@
     <!-- from About Activity -->
     <string name="about_title">About this app</string>
     <string name="about_text">Hey, guys, this app written for myself, it\'s not redundant, it\'s just performing its functions.
-    The app is free and without advertising, but if you want to thank me, you can:</string>
-    <string name="about_donate">Donate $1</string>
+        The app is free and without advertising, but if you want to thank me, you can:</string>
+    <string name="about_donate">Donate</string>
+    <string name="donate_ok">Thanks!</string>
     <string name="about_rank">Rank App</string>
-
+    <string name="ir_missing">This device has not a InfraRed supply and app can not work, sorry :(</string>
 </resources>
