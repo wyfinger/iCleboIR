@@ -11,6 +11,7 @@
     <string name="main_climb">Climb</string>
     <string name="main_spot">Spot</string>
     <string name="main_max">Max</string>
+    <string name="main_turbo">Turbo</string>
     <!-- from About Activity -->
     <string name="about_title">그것에 대해</string>
     <string name="about_text">이봐, 얘들 아,이 응용 프로그램 자체에 대한 서면, 그것은 중복되지 않습니다, 그냥 기능을 수행하고있어.

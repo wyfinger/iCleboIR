@@ -11,6 +11,7 @@
     <string name="main_climb">Climb</string>
     <string name="main_spot">Spot</string>
     <string name="main_max">Max</string>
+    <string name="main_turbo">Turbo</string>
     <!-- from About Activity -->
     <string name="about_title">О программе</string>
     <string name="about_text">Привет ребят, это приложение написано для себя, здесь нет свистоперделок, оно просто выполняет свои функции.

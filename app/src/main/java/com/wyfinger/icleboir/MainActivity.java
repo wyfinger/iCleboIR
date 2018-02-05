@@ -67,6 +67,7 @@ public class MainActivity extends Activity {
                     case R.id.btnBase:  onBaseClick(null);   break;
                     case R.id.btnClimb:  onClimbClick(null);   break;
                     case R.id.btnSpot:  onSpotClick(null);   break;
+                    case R.id.btnTurbo:  onTurboClick(null);   break;
                     case R.id.btnMax:  onMaxClick(null);   break;
                 }
                 // and start repeat timer
@@ -93,6 +94,7 @@ public class MainActivity extends Activity {
             ((Button) findViewById(R.id.btnBase)).setOnTouchListener(touchListener);
             ((Button) findViewById(R.id.btnClimb)).setOnTouchListener(touchListener);
             ((Button) findViewById(R.id.btnSpot)).setOnTouchListener(touchListener);
+            ((Button) findViewById(R.id.btnTurbo)).setOnTouchListener(touchListener);
             ((Button) findViewById(R.id.btnMax)).setOnTouchListener(touchListener);
         } else {
             Toast.makeText(getApplicationContext(),
@@ -230,6 +232,15 @@ public class MainActivity extends Activity {
                 1700, 550, 1700, 500, 1700, 550, 1650, 550, 550, 550, 1700, 550, 1700, 500, 550,
                 550, 600, 550, 550, 550, 550, 550, 550, 600, 1650, 550, 550, 550, 550, 550, 1700,
                 550, 1700, 500, 1700, 550, 1650, 550};
+        manager.transmit(38000, pattern);
+    }
+
+    private void onTurboClick(View view) {
+        int[] pattern = {8850, 4550, 450, 1750, 450, 650, 450, 650, 450, 650, 450, 650, 450, 650,
+                450, 650, 450, 650, 450, 650, 450, 1750, 450, 1750, 450, 1750, 450, 1750, 450,
+                1750, 450, 1750, 450, 1750, 450, 1750, 450, 1750, 450, 1750, 450, 1750, 450, 650,
+                450, 650, 450, 650, 450, 650, 450, 650, 450, 650, 450, 650, 450, 650, 450, 1750,
+                450, 1750, 450, 1750, 450, 1750, 450};
         manager.transmit(38000, pattern);
     }
 

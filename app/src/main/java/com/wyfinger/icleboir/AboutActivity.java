@@ -60,7 +60,7 @@ public class AboutActivity extends Activity {
         //
         mHelper = new IabHelper(this, getString(R.string.billing_key));
         // enable debug logging (for a production application, you should set this to false).
-        mHelper.enableDebugLogging(true);
+        mHelper.enableDebugLogging(false);
 
         mHelper.startSetup(new IabHelper.OnIabSetupFinishedListener() {
             public void onIabSetupFinished(IabResult result) {

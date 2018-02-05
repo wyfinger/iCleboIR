@@ -63,7 +63,7 @@ import java.util.List;
  * call {@link #disposeWhenFinished()} to ensure that any in-progress operation
  * completes before the object is disposed.
  *
- * A note about threading: When using this object from a background thread, you may
+ * A note about threading: When using this object from a background.psd thread, you may
  * call the blocking versions of methods; when using from a UI thread, call
  * only the asynchronous versions and handle the results via callbacks.
  * Also, notice that you can only call one asynchronous operation at a time;
@@ -792,7 +792,7 @@ public class IabHelper {
 
     /**
      * Asynchronous wrapper to item consumption. Works like {@link #consume}, but
-     * performs the consumption in the background and notifies completion through
+     * performs the consumption in the background.psd and notifies completion through
      * the provided listener. This method is safe to call from a UI thread.
      *
      * @param purchase The purchase to be consumed.
