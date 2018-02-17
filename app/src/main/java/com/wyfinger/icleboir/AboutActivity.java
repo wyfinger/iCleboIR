@@ -1,62 +1,33 @@
 package com.wyfinger.icleboir;
 
-import android.app.Activity;
-import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
-import android.content.ServiceConnection;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.IBinder;
-import android.os.RemoteException;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.widget.Toast;
-import com.android.vending.billing.IInAppBillingService;
 import com.wyfinger.icleboir.util.IabHelper;
 import com.wyfinger.icleboir.util.IabResult;
-import com.wyfinger.icleboir.util.Inventory;
 import com.wyfinger.icleboir.util.Purchase;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 import static android.content.ContentValues.TAG;
 
-/*class InAppProduct {
-
-    public String productId;
-    public String storeName;
-    public String storeDescription;
-    public String price;
-    public boolean isSubscription;
-    public int priceAmountMicros;
-    public String currencyIsoCode;
-
-    public String getSku() {
-        return productId;
-    }
-
-    String getType() {
-        return isSubscription ? "subs" : "inapp";
-    }
-
-}*/
-
-public class AboutActivity extends Activity {
+public class AboutActivity extends AppCompatActivity {
 
     IabHelper mHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE); // no title
         setContentView(R.layout.activity_about);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         //
         mHelper = new IabHelper(this, getString(R.string.billing_key));
         // enable debug logging (for a production application, you should set this to false).
@@ -69,11 +40,9 @@ public class AboutActivity extends Activity {
                     Log.d(TAG, "Problem setting up In-app Billing: " + result);
                 }
                 if (mHelper == null) return;
-
                 // Hooray, IAB is fully set up!
             }
         });
-
     }
 
     @Override
@@ -89,6 +58,12 @@ public class AboutActivity extends Activity {
         mHelper = null;
     }
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
     public void onDonateClick(View view) {
 
         try {
@@ -98,6 +73,12 @@ public class AboutActivity extends Activity {
             Log.d(TAG, "Error launching purchase flow. Another async operation in progress.");
         }
 
+    }
+
+    public void onRankClick(View view) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("market://details?id=com.wyfinger.icleboir"));
+        startActivity(intent);
     }
 
     // Callback for when a purchase is finished
@@ -116,13 +97,5 @@ public class AboutActivity extends Activity {
             Toast.makeText(getApplicationContext(), R.string.donate_ok, Toast.LENGTH_LONG).show();
         }
     };
-
-
-    public void onRankClick(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse("market://details?id=com.wyfinger.icleboir"));
-        startActivity(intent);
-    }
-
 
 }

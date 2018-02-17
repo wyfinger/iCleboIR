@@ -1,23 +1,40 @@
 <resources>
-    <!-- from App -->
-    <string name="app_name">Robot IR Control</string>
     <!-- from Main Activity -->
-    <string name="main_power">Power</string>
-    <string name="main_start">Start</string>
-    <string name="main_mode">Mode</string>
-    <string name="main_clock">Clock</string>
-    <string name="main_timer">Timer</string>
-    <string name="main_base">Base</string>
-    <string name="main_climb">Climb</string>
-    <string name="main_spot">Spot</string>
-    <string name="main_max">Max</string>
-    <string name="main_turbo">Turbo</string>
+    <string name="ir_missing">이 기기에는 InfraRed 공급 장치가 없으므로 앱을 사용할 수 없습니다. 죄송합니다. (</string>
     <!-- from About Activity -->
     <string name="about_title">그것에 대해</string>
     <string name="about_text">이봐, 얘들 아,이 응용 프로그램 자체에 대한 서면, 그것은 중복되지 않습니다, 그냥 기능을 수행하고있어.
         신청서는 무료이며 광고가 없지만 나에게 감사하고 싶다면 - 가능합니다:</string>
     <string name="about_donate">기부</string>
     <string name="donate_ok">감사</string>
-    <string name="about_rank">평가 앱</string>
-    <string name="ir_missing">이 기기에는 InfraRed 공급 장치가 없으므로 앱을 사용할 수 없습니다. 죄송합니다. (</string>
+    <string name="about_rank">평가 앱</string>    
+    <!-- from Scheduler Activity -->  
+    <string name="scheduler_scheduler">스케줄러</string>
+    <string name="scheduler_message_about">일정이 로봇에 저장되지 않는다는 것을 기억하십시오!</string>
+    <string name="scheduler_message_never">켜지지는 않으며 하루를 선택하지 않습니다.</string>
+    <string name="scheduler_message_script">동작 명령을 정의한 다음 \"뒤로\"버튼을 클릭하십시오.</string>
+    <string name="scheduler_new_action">새 동작</string>
+    <string name="scheduler_edit_action">편집 작업</string>
+    <string name="scheduler_delete_action">삭제 작업</string>
+    <string name="scheduler_dayofweek">요일</string>
+    <string name="scheduler_everyday">매일</string>
+    <string name="scheduler_workdays">작업일</string>
+    <string name="scheduler_weekend">주말</string>
+    <string name="scheduler_never">결코</string>
+    <string name="scheduler_monday">월요일</string>
+    <string name="scheduler_tuesday">화요일</string>
+    <string name="scheduler_wednesday">수요일</string>
+    <string name="scheduler_thursday">목요일</string>
+    <string name="scheduler_friday">금요일</string>
+    <string name="scheduler_saturday">토요일</string>
+    <string name="scheduler_sunday">일요일</string>
+    <string name="scheduler_monday_short">Mon</string>
+    <string name="scheduler_tuesday_short">Tue</string>
+    <string name="scheduler_wednesday_short">Wed</string>
+    <string name="scheduler_thursday_short">Thu</string>
+    <string name="scheduler_friday_short">Fri</string>
+    <string name="scheduler_saturday_short">Sat</string>
+    <string name="scheduler_sunday_short">Sun</string>
+    <string name="scheduler_time">시간</string>
+    <string name="scheduler_commands">명령을</string>
 </resources>

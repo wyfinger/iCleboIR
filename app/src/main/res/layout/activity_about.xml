@@ -1,67 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="16dp"
-    android:layout_marginBottom="16dp"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    android:layout_gravity="center"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context="com.wyfinger.icleboir.AboutActivity">
 
-    <LinearLayout
-        android:layout_width="240dp"
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/textAboutTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@android:style/TextAppearance.Medium"
-            android:text="@string/about_title"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"/>
-        <TextView
-            android:id="@+id/textAboutText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@android:style/TextAppearance.Small"
-            android:text="@string/about_text"
-            app:layout_constraintTop_toBottomOf="@+id/textAboutTitle">
-        </TextView>
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="8dp"
-            android:layout_gravity="center_horizontal"
-            app:layout_constraintTop_toTopOf="@+id/textAboutText">
-            <Button
-                android:id="@+id/btnDonate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/about_donate"
-                android:layout_marginRight="4dp"
-                app:layout_constraintTop_toBottomOf="@+id/textAboutText"
-                app:layout_constraintRight_toLeftOf="@+id/btnRank"
-                android:textAllCaps="false"
-                android:onClick="onDonateClick" />
-            <Button
-                android:id="@+id/btnRank"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/about_rank"
-                android:layout_marginLeft="4dp"
-                app:layout_constraintTop_toBottomOf="@+id/textAboutText"
-                app:layout_constraintLeft_toRightOf="@+id/btnDonate"
-                android:textAllCaps="false"
-                android:onClick="onRankClick" />
-        </LinearLayout>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
 
-    </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
 
+    <include layout="@layout/content_about" />
 
-</android.support.constraint.ConstraintLayout>
+</android.support.design.widget.CoordinatorLayout>

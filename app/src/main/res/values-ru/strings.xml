@@ -1,17 +1,6 @@
 <resources>
-    <!-- from App -->
-    <string name="app_name">Robot IR Control</string>
     <!-- from Main Activity -->
-    <string name="main_power">Power</string>
-    <string name="main_start">Start</string>
-    <string name="main_mode">Mode</string>
-    <string name="main_clock">Clock</string>
-    <string name="main_timer">Timer</string>
-    <string name="main_base">Base</string>
-    <string name="main_climb">Climb</string>
-    <string name="main_spot">Spot</string>
-    <string name="main_max">Max</string>
-    <string name="main_turbo">Turbo</string>
+    <string name="ir_missing">У этого устройства нет ИК излучателя, приложение не сможет нормально работать, извините :(</string>
     <!-- from About Activity -->
     <string name="about_title">О программе</string>
     <string name="about_text">Привет ребят, это приложение написано для себя, здесь нет свистоперделок, оно просто выполняет свои функции.
@@ -19,5 +8,33 @@
     <string name="about_donate">На пиво</string>
     <string name="donate_ok">Спасибо!</string>
     <string name="about_rank">Оценить</string>
-    <string name="ir_missing">У этого устройства нет ИК излучателя, приложение не сможет нормально работать, извините :(</string>
+    <!-- from Scheduler Activity -->  
+    <string name="scheduler_scheduler">Планировщик</string>    
+    <string name="scheduler_message_about">Помните, расписание не сохраняется в роботе!</string>
+    <string name="scheduler_message_never">Невозможно включить, т.к. не выбран ни один день.</string>
+    <string name="scheduler_message_script">Наберите команды действия, по окончании нажмите \"Назад\"</string>
+    <string name="scheduler_new_action">Новое действие</string>
+    <string name="scheduler_edit_action">Редактировать действие</string>
+    <string name="scheduler_delete_action">Удалить действие</string>
+    <string name="scheduler_dayofweek">Дни недели</string>
+    <string name="scheduler_everyday">Ежедневно</string>
+    <string name="scheduler_workdays">Рабочие дни</string>
+    <string name="scheduler_weekend">Выходные</string>
+    <string name="scheduler_never">Никогда</string>
+    <string name="scheduler_monday">Понедельник</string>
+    <string name="scheduler_tuesday">Вторник</string>
+    <string name="scheduler_wednesday">Среда</string>
+    <string name="scheduler_thursday">Четверг</string>
+    <string name="scheduler_friday">Пятница</string>
+    <string name="scheduler_saturday">Суббота</string>
+    <string name="scheduler_sunday">Воскресенье</string>
+    <string name="scheduler_monday_short">Пн</string>
+    <string name="scheduler_tuesday_short">Вт</string>
+    <string name="scheduler_wednesday_short">Ср</string>
+    <string name="scheduler_thursday_short">Чт</string>
+    <string name="scheduler_friday_short">Пт</string>
+    <string name="scheduler_saturday_short">Сб</string>
+    <string name="scheduler_sunday_short">Вс</string>
+    <string name="scheduler_time">Время</string>
+    <string name="scheduler_commands">Команды</string>
 </resources>

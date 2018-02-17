@@ -1,36 +1,71 @@
 package com.wyfinger.icleboir;
 
 
-import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.hardware.ConsumerIrManager;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.view.Menu;
+import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     ConsumerIrManager manager;
     Vibrator vibrator;
     SendTimerTask sendTimerTask = new SendTimerTask();
     Timer sendTimer = new Timer();
     boolean repeat = false;
+    ActionScript recordScript;
+    boolean recMode = false;
+
+    private View.OnClickListener btnAboutClickListener = new View.OnClickListener() {
+        public void onClick(View v) {
+            Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+            startActivity(intent);
+        }
+    };
+
+    AlarmManager am;
+    Intent intent1;
+    PendingIntent pIntent1;
+
+    private View.OnClickListener btnSettingsClickListener = new View.OnClickListener() {
+        public void onClick(View v) {
+            Intent intent = new Intent(MainActivity.this, ScheduleActivity.class);
+            startActivity(intent);
+        }
+    };
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        Intent intent = new Intent(MainActivity.this, AboutActivity.class);
-        startActivity(intent);
-        return false;
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK) & (recMode)) {
+            //Do stuff
+            Intent intent = new Intent();
+            intent.putExtra(getPackageName() + ".recordScript", recordScript);
+            setResult(RESULT_OK, intent);
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
     @Override
@@ -39,12 +74,31 @@ public class MainActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE); // no title
         setContentView(R.layout.activity_main);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); // vertical screen only
-        manager = (ConsumerIrManager) this.getSystemService(CONSUMER_IR_SERVICE);
         vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         sendTimerTask = new SendTimerTask();
         sendTimer = new Timer();
         sendTimer.schedule(sendTimerTask, 200, 200);
 
+        manager = (ConsumerIrManager) this.getSystemService(CONSUMER_IR_SERVICE);
+
+        // record mode
+        recMode = ("record" == getIntent().getAction());
+
+        ImageView btnAbout = (ImageView) findViewById(R.id.btnAbout);
+        ImageView btnSettings = (ImageView) findViewById(R.id.btnSettings);
+
+        recordScript = new ActionScript();
+
+        if (recMode) {
+            btnAbout.setVisibility(View.INVISIBLE);
+            btnSettings.setVisibility(View.INVISIBLE);
+            recordScript.clear();
+        } else {
+            btnAbout.setVisibility(View.VISIBLE);
+            btnSettings.setVisibility(View.VISIBLE);
+            btnAbout.setOnClickListener(btnAboutClickListener);
+            btnSettings.setOnClickListener(btnSettingsClickListener);
+        }
 
         // set onTouch listener for all buttons on view
         View.OnTouchListener touchListener = new View.OnTouchListener() {
@@ -81,13 +135,13 @@ public class MainActivity extends Activity {
         };
 
         if (manager.hasIrEmitter()) {
-            ((Button) findViewById(R.id.btnPower)).setOnTouchListener(touchListener);
-            ((Button) findViewById(R.id.btnStart)).setOnTouchListener(touchListener);
-            ((Button) findViewById(R.id.btnUp)).setOnTouchListener(touchListener);
-            ((Button) findViewById(R.id.btnLeft)).setOnTouchListener(touchListener);
-            ((Button) findViewById(R.id.btnSelect)).setOnTouchListener(touchListener);
-            ((Button) findViewById(R.id.btnRight)).setOnTouchListener(touchListener);
-            ((Button) findViewById(R.id.btnDown)).setOnTouchListener(touchListener);
+            ((ImageButton) findViewById(R.id.btnPower)).setOnTouchListener(touchListener);
+            ((ImageButton) findViewById(R.id.btnStart)).setOnTouchListener(touchListener);
+            ((ImageButton) findViewById(R.id.btnUp)).setOnTouchListener(touchListener);
+            ((ImageButton) findViewById(R.id.btnLeft)).setOnTouchListener(touchListener);
+            ((ImageButton) findViewById(R.id.btnSelect)).setOnTouchListener(touchListener);
+            ((ImageButton) findViewById(R.id.btnRight)).setOnTouchListener(touchListener);
+            ((ImageButton) findViewById(R.id.btnDown)).setOnTouchListener(touchListener);
             ((Button) findViewById(R.id.btnMode)).setOnTouchListener(touchListener);
             ((Button) findViewById(R.id.btnClock)).setOnTouchListener(touchListener);
             ((Button) findViewById(R.id.btnTimer)).setOnTouchListener(touchListener);
@@ -103,7 +157,6 @@ public class MainActivity extends Activity {
     }
 
     private class SendTimerTask extends TimerTask {
-
         @Override
         public void run() {
             if (repeat) {
@@ -119,137 +172,77 @@ public class MainActivity extends Activity {
     }
 
     private void onPowerClick(View view) {
-        int[] pattern = {8950, 4450, 550, 1700, 500, 550, 600, 550, 550, 550, 550, 550, 550, 550,
-                600, 550, 550, 550, 550, 550, 550, 1700, 550, 1650, 550, 1700, 550, 1650, 550,
-                1700, 550, 1650, 550, 1700, 500, 1700, 550, 1700, 500, 1700, 550, 550, 550, 550,
-                550, 550, 600, 500, 600, 550, 550, 550, 550, 550, 600, 500, 600, 1650, 550, 1700,
-                550, 1650, 600, 1650, 550, 1650, 550};
-        manager.transmit(38000, pattern);
+        recordScript.play(ActionScript.ID_POWER);
+        recordScript.add(ActionScript.ID_POWER);
     }
 
     private void onStartClick(View view) {
-        int[] pattern = {8900, 4450, 550, 1650, 550, 550, 550, 600, 550, 550, 550, 550, 550, 550,
-                550, 600, 550, 550, 550, 550, 550, 1700, 550, 1650, 550, 1700, 500, 1700, 550,
-                1700, 500, 1700, 550, 1650, 550, 550, 550, 600, 550, 1650, 550, 550, 550, 550,
-                600, 550, 550, 550, 550, 550, 550, 1700, 550, 1700, 500, 550, 600, 1650, 550,
-                1700, 500, 1700, 550, 1700, 500, 1700, 550};
-        manager.transmit(38000, pattern);
+        recordScript.play(ActionScript.ID_START);
+        recordScript.add(ActionScript.ID_START);
     }
 
     private void onUpClick(View view) {
-        int[] pattern = {8900, 4500, 550, 1650, 550, 550, 550, 550, 600, 550, 550, 550, 550, 600,
-                500, 550, 600, 550, 550, 550, 550, 1700, 550, 1650, 550, 1700, 500, 1700, 550,
-                1700, 500, 1700, 550, 1650, 550, 550, 600, 550, 550, 550, 550, 1700, 500, 600,
-                550, 550, 550, 550, 550, 600, 550, 1650, 550, 1700, 500, 1700, 550, 550, 550,
-                1700, 550, 1650, 550, 1700, 500, 1700, 550};
-        manager.transmit(38000, pattern);
+        recordScript.play(ActionScript.ID_UP);
+        recordScript.add(ActionScript.ID_UP);
     }
 
     private void onLeftClick(View view) {
-        int[] pattern = {8900, 4450, 550, 1700, 500, 600, 550, 550, 550, 550, 550, 550, 550, 600,
-                550, 550, 550, 550, 550, 550, 550, 1700, 550, 1700, 500, 1700, 550, 1650, 550,
-                1700, 550, 1650, 550, 1700, 500, 1700, 550, 1700, 500, 600, 550, 1650, 550, 550,
-                550, 550, 600, 550, 550, 550, 550, 550, 550, 600, 550, 1650, 550, 550, 550, 1700,
-                550, 1650, 550, 1700, 550, 1650, 550};
-        manager.transmit(38000, pattern);
-    }
-
-    private void onRightClick(View view) {
-        int[] pattern = {8900, 4450, 550, 1650, 550, 550, 550, 550, 600, 550, 550, 550, 550, 550,
-                550, 600, 550, 550, 550, 550, 550, 1700, 550, 1650, 550, 1700, 550, 1650, 550,
-                1700, 500, 1700, 550, 1700, 500, 550, 600, 1650, 550, 550, 550, 1700, 550, 550,
-                550, 550, 550, 550, 600, 550, 550, 1650, 550, 550, 550, 1700, 550, 550, 550, 1700,
-                550, 1650, 550, 1700, 500, 1700, 550};
-        manager.transmit(38000, pattern);
+        recordScript.play(ActionScript.ID_LEFT);
+        recordScript.add(ActionScript.ID_LEFT);
     }
 
     private void onSelectClick(View view) {
-        int[] pattern = {8900, 4500, 500, 1700, 550, 550, 550, 600, 500, 600, 550, 550, 550, 550,
-                550, 600, 550, 550, 550, 550, 550, 1700, 500, 1700, 550, 1700, 500, 1700, 550,
-                1650, 550, 1700, 550, 1650, 550, 600, 500, 600, 550, 1650, 550, 1700, 500, 600,
-                550, 550, 550, 550, 550, 600, 500, 1700, 550, 1700, 500, 600, 550, 550, 550, 1700,
-                500, 1700, 550, 1650, 550, 1700, 550};
-        manager.transmit(38000, pattern);
+        recordScript.play(ActionScript.ID_SELECT);
+        recordScript.add(ActionScript.ID_SELECT);
+    }
+
+    private void onRightClick(View view) {
+        recordScript.play(ActionScript.ID_RIGHT);
+        recordScript.add(ActionScript.ID_RIGHT);
     }
 
     private void onDownClick(View view) {
-        int[] pattern = {8950, 4450, 550, 1700, 500, 600, 550, 550, 550, 550, 550, 550, 550, 600,
-                550, 550, 550, 550, 550, 550, 550, 1700, 550, 1700, 500, 1700, 550, 1700, 500,
-                1700, 550, 1650, 550, 1700, 550, 1650, 550, 550, 550, 550, 600, 1650, 550, 550,
-                550, 550, 600, 550, 550, 550, 550, 550, 550, 1700, 550, 1700, 500, 550, 600, 1650,
-                550, 1700, 500, 1700, 550, 1700, 500};
-        manager.transmit(38000, pattern);
+        recordScript.play(ActionScript.ID_DOWN);
+        recordScript.add(ActionScript.ID_DOWN);
     }
 
     private void onModeClick(View view) {
-        int[] pattern = {8900, 4500, 550, 1650, 550, 550, 550, 600, 500, 600, 550, 550, 550, 550,
-                550, 600, 500, 600, 550, 550, 550, 1700, 500, 1700, 550, 1700, 500, 1700, 550,
-                1650, 550, 1700, 550, 1650, 550, 600, 500, 1700, 550, 1650, 550, 600, 500, 600,
-                550, 550, 550, 550, 550, 550, 550, 1700, 550, 550, 550, 550, 550, 1700, 550, 1650,
-                550, 1700, 550, 1650, 550, 1700, 550};
-        manager.transmit(38000, pattern);
+        recordScript.play(ActionScript.ID_MODE);
+        recordScript.add(ActionScript.ID_MODE);
     }
 
     private void onClockClick(View view) {
-        int[] pattern = {8950, 4450, 550, 1650, 550, 600, 500, 600, 550, 550, 550, 600, 500, 600,
-                500, 600, 550, 550, 550, 550, 550, 1700, 550, 1650, 550, 1700, 550, 1650, 550,
-                1700, 500, 1700, 550, 1700, 500, 1700, 550, 550, 550, 1700, 500, 600, 550, 550,
-                550, 550, 550, 600, 500, 600, 550, 550, 550, 1700, 500, 600, 550, 1650, 550, 1700,
-                550, 1650, 550, 1700, 500, 1700, 550};
-        manager.transmit(38000, pattern);
+        recordScript.play(ActionScript.ID_CLOCK);
+        recordScript.add(ActionScript.ID_CLOCK);
     }
 
     private void onTimerClick(View view) {
-        int[] pattern = {8950, 4450, 550, 1650, 550, 550, 550, 600, 550, 550, 550, 600, 500, 550,
-                550, 600, 550, 550, 550, 600, 500, 1700, 550, 1650, 550, 1700, 550, 1650, 550,
-                1700, 500, 1700, 550, 1700, 500, 1700, 550, 550, 550, 600, 500, 600, 550, 550,
-                550, 550, 550, 600, 500, 600, 550, 550, 550, 1700, 500, 1700, 550, 1650, 550,
-                1700, 550, 1650, 550, 1700, 550, 1650, 550};
-        manager.transmit(38000, pattern);
+        recordScript.play(ActionScript.ID_TIMER);
+        recordScript.add(ActionScript.ID_TIMER);
     }
 
     private void onBaseClick(View view) {
-        int[] pattern = {8900, 4450, 550, 1700, 500, 600, 550, 550, 550, 550, 550, 550, 600, 550,
-                550, 550, 550, 550, 550, 550, 600, 1650, 550, 1700, 500, 1700, 550, 1650, 550,
-                1700, 550, 1650, 550, 1700, 550, 550, 550, 1700, 500, 550, 600, 550, 550, 550,
-                550, 550, 550, 550, 600, 550, 550, 1650, 550, 550, 550, 1700, 550, 1700, 500,
-                1700, 550, 1650, 550, 1700, 550, 1650, 550};
-        manager.transmit(38000, pattern);
+        recordScript.play(ActionScript.ID_BASE);
+        recordScript.add(ActionScript.ID_BASE);
     }
 
     private void onClimbClick(View view) {
-        int[] pattern = {8950, 4450, 550, 1700, 550, 550, 550, 550, 550, 550, 600, 550, 550, 550,
-                550, 550, 550, 550, 600, 550, 550, 1700, 500, 1700, 550, 1650, 550, 1700, 550,
-                1650, 550, 1700, 500, 1700, 550, 1700, 500, 1700, 550, 550, 550, 550, 550, 550,
-                600, 550, 550, 550, 550, 550, 550, 550, 600, 550, 550, 1700, 500, 1700, 550, 1650,
-                550, 1700, 550, 1650, 550, 1700, 500};
-        manager.transmit(38000, pattern);
+        recordScript.play(ActionScript.ID_CLIMB);
+        recordScript.add(ActionScript.ID_CLIMB);
     }
 
     private void onSpotClick(View view) {
-        int[] pattern = {8950, 4450, 550, 1700, 550, 550, 550, 550, 550, 550, 550, 550, 600, 550,
-                550, 550, 550, 550, 550, 550, 600, 1650, 550, 1700, 500, 1700, 550, 1700, 500,
-                1700, 550, 1700, 500, 1700, 550, 1650, 550, 550, 550, 1700, 550, 1700, 500, 550,
-                550, 600, 550, 550, 550, 550, 550, 550, 600, 1650, 550, 550, 550, 550, 550, 1700,
-                550, 1700, 500, 1700, 550, 1650, 550};
-        manager.transmit(38000, pattern);
+        recordScript.play(ActionScript.ID_SPOT);
+        recordScript.add(ActionScript.ID_SPOT);
     }
 
     private void onTurboClick(View view) {
-        int[] pattern = {8850, 4550, 450, 1750, 450, 650, 450, 650, 450, 650, 450, 650, 450, 650,
-                450, 650, 450, 650, 450, 650, 450, 1750, 450, 1750, 450, 1750, 450, 1750, 450,
-                1750, 450, 1750, 450, 1750, 450, 1750, 450, 1750, 450, 1750, 450, 1750, 450, 650,
-                450, 650, 450, 650, 450, 650, 450, 650, 450, 650, 450, 650, 450, 650, 450, 1750,
-                450, 1750, 450, 1750, 450, 1750, 450};
-        manager.transmit(38000, pattern);
+        recordScript.play(ActionScript.ID_TURBO);
+        recordScript.add(ActionScript.ID_TURBO);
     }
 
     private void onMaxClick(View view) {
-        int[] pattern = {8950, 4450, 550, 1700, 550, 550, 550, 550, 550, 550, 550, 600, 550, 550,
-                550, 550, 550, 550, 550, 600, 550, 1650, 550, 1700, 550, 1650, 550, 1700, 500,
-                1700, 550, 1700, 500, 1700, 550, 550, 550, 1700, 550, 1650, 550, 1700, 500, 550,
-                600, 550, 550, 550, 550, 550, 550, 1700, 550, 550, 550, 550, 550, 550, 600, 1650,
-                550, 1700, 500, 1700, 550, 1700, 500};
-        manager.transmit(38000, pattern);
+        recordScript.play(ActionScript.ID_MAX);
+        recordScript.add(ActionScript.ID_MAX);
     }
 }

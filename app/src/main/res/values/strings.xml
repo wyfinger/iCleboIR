@@ -1,17 +1,23 @@
 <resources>
     <!-- from App -->
-    <string name="app_name">Robot IR Control</string>
+    <string name="app_name" translatable="false">Robot IR Control</string>
     <!-- from Main Activity -->
-    <string name="main_power">Power</string>
-    <string name="main_start">Start</string>
-    <string name="main_mode">Mode</string>
-    <string name="main_clock">Clock</string>
-    <string name="main_timer">Timer</string>
-    <string name="main_base">Base</string>
-    <string name="main_climb">Climb</string>
-    <string name="main_spot">Spot</string>
-    <string name="main_max">Max</string>
-    <string name="main_turbo">Turbo</string>
+    <string name="main_power" translatable="false">Power</string>
+    <string name="main_start" translatable="false">Start</string>
+    <string name="main_up" translatable="false">Up</string>
+    <string name="main_left" translatable="false">Left</string>
+    <string name="main_select" translatable="false">Select</string>
+    <string name="main_right" translatable="false">Right</string>
+    <string name="main_down" translatable="false">Down</string>
+    <string name="main_mode" translatable="false">Mode</string>
+    <string name="main_clock" translatable="false">Clock</string>
+    <string name="main_timer" translatable="false">Timer</string>
+    <string name="main_base" translatable="false">Base</string>
+    <string name="main_climb" translatable="false">Climb</string>
+    <string name="main_spot" translatable="false">Spot</string>
+    <string name="main_max" translatable="false">Max</string>
+    <string name="main_turbo" translatable="false">Turbo</string>
+    <string name="ir_missing">This device has not a InfraRed supply and app can not work, sorry :(</string>
     <!-- from About Activity -->
     <string name="about_title">About this app</string>
     <string name="about_text">Hey, guys, this app written for myself, it\'s not redundant, it\'s just performing its functions.
@@ -19,5 +25,33 @@
     <string name="about_donate">Donate</string>
     <string name="donate_ok">Thanks!</string>
     <string name="about_rank">Rank App</string>
-    <string name="ir_missing">This device has not a InfraRed supply and app can not work, sorry :(</string>
+    <!-- from Scheduler Activity -->
+    <string name="scheduler_scheduler">Scheduler</string>
+    <string name="scheduler_message_about">Remember, the schedule is not saved in the robot!</string>
+    <string name="scheduler_message_never">Can\'t enable if no days selected, edit action days.</string>
+    <string name="scheduler_message_script">Define the action commands, then click \"Back\" button</string>
+    <string name="scheduler_new_action">New action</string>
+    <string name="scheduler_edit_action">Edit action</string>
+    <string name="scheduler_delete_action">Delete action</string>
+    <string name="scheduler_dayofweek">Day of week</string>
+    <string name="scheduler_everyday">Everyday</string>
+    <string name="scheduler_workdays">Work days</string>
+    <string name="scheduler_weekend">Weekend</string>
+    <string name="scheduler_never">Never</string>
+    <string name="scheduler_monday">Monday</string>
+    <string name="scheduler_tuesday">Tuesday</string>
+    <string name="scheduler_wednesday">Wednesday</string>
+    <string name="scheduler_thursday">Thursday</string>
+    <string name="scheduler_friday">Friday</string>
+    <string name="scheduler_saturday">Saturday</string>
+    <string name="scheduler_sunday">Sunday</string>
+    <string name="scheduler_monday_short">Mon</string>
+    <string name="scheduler_tuesday_short">Tue</string>
+    <string name="scheduler_wednesday_short">Wed</string>
+    <string name="scheduler_thursday_short">Thu</string>
+    <string name="scheduler_friday_short">Fri</string>
+    <string name="scheduler_saturday_short">Sat</string>
+    <string name="scheduler_sunday_short">Sun</string>
+    <string name="scheduler_time">Time</string>
+    <string name="scheduler_commands">Commands</string>
 </resources>

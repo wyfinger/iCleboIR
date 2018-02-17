@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="10mm"
+   height="10mm"
+   viewBox="0 0 10 10"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="shedule.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.919596"
+     inkscape:cx="19.519969"
+     inkscape:cy="14.781"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g4648"
+     showgrid="false"
+     inkscape:window-width="2560"
+     inkscape:window-height="1028"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-center="true"
+     inkscape:snap-text-baseline="false"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-others="true"
+     inkscape:snap-nodes="true"
+     inkscape:snap-global="true"
+     inkscape:measure-start="8.63839,33.2081"
+     inkscape:measure-end="15.5428,33.2081"
+     inkscape:pagecheckerboard="true" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-287)">
+    <g
+       id="g4760"
+       inkscape:label="календарь">
+      <path
+         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#b8b8b8;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.30771089;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+         d="m 3.3964844,6.359375 c -1.1499891,0 -2.095703,0.9457063 -2.0957032,2.0957031 v 4.4023439 18.630859 c 0,1.149997 0.9457141,2.095703 2.0957032,2.095703 H 20.777344 C 20.33666,33.183686 19.930895,32.746557 19.564453,32.277344 H 3.3964844 c -0.448137,0 -0.7871094,-0.340886 -0.7871094,-0.789063 V 12.857422 h 32.675781 v 5.636719 c 0.487777,0.492564 0.925468,1.032318 1.306641,1.611328 V 12.857422 8.4550781 c 0,-1.1499968 -0.945714,-2.0957031 -2.095703,-2.0957031 h -3.4375 v 2.3730469 c 0,0.9462932 -0.751909,1.7070311 -1.685547,1.7070311 -0.933638,0 -1.683594,-0.7607379 -1.683594,-1.7070311 V 6.359375 h -3.535156 v 2.3730469 c 0,0.9462932 -0.751909,1.7070311 -1.685547,1.7070311 -0.933638,0 -1.683594,-0.7607379 -1.683594,-1.7070311 V 6.359375 H 17.25 v 2.3730469 c 0,0.9462932 -0.751909,1.7070311 -1.685547,1.7070311 -0.933638,0 -1.685547,-0.7607379 -1.685547,-1.7070311 V 6.359375 h -3.533203 v 2.3730469 c 0,0.9462932 -0.7519084,1.7070311 -1.6855468,1.7070311 -0.9336379,0 -1.6855468,-0.7607379 -1.6855468,-1.7070311 V 6.359375 Z"
+         transform="matrix(0.26458333,0,0,0.26458333,0,287)"
+         id="rect4496"
+         inkscape:connector-curvature="0"
+         inkscape:label="контур календаря" />
+      <g
+         id="g4751"
+         inkscape:label="сетка календаря">
+        <path
+           inkscape:connector-curvature="0"
+           id="path4657"
+           transform="matrix(0.26458333,0,0,0.26458333,0,287)"
+           d="M 3.6171875,16.962891 V 18.09375 H 20.830078 a 10.477988,10.477988 0 0 1 1.494141,-1.130859 z"
+           style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#b8b8b8;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.90235114;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path4659"
+           transform="matrix(0.26458333,0,0,0.26458333,0,287)"
+           d="m 3.6171875,22.152344 v 0.568359 H 17.847656 a 10.477988,10.477988 0 0 1 0.208985,-0.568359 z"
+           style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#b8b8b8;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.44735172;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path4661"
+           transform="matrix(0.26458333,0,0,0.26458333,0,287)"
+           d="m 3.6171875,26.966797 v 0.560547 H 17.503906 a 10.477988,10.477988 0 0 1 -0.06836,-0.560547 z"
+           style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#b8b8b8;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.48231688;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path4663"
+           d="m 2.0198102,291.63746 v 3.6144"
+           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#b8b8b8;stroke-width:0.15000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#b8b8b8;stroke-width:0.15000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 3.5080915,291.63746 v 3.6144"
+           id="path4665"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path4667"
+           transform="matrix(0.26458333,0,0,0.26458333,0,287)"
+           d="m 18.623047,17.525391 v 3.363281 a 10.477988,10.477988 0 0 1 0.568359,-0.9375 v -2.425781 z"
+           style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#b8b8b8;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.41524404;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      </g>
+      <g
+         id="g4766"
+         inkscape:label="петли календаря"
+         style="stroke:#b8b8b8;stroke-opacity:1">
+        <path
+           inkscape:label="петля"
+           style="fill:none;fill-rule:evenodd;stroke:#b8b8b8;stroke-width:0.30000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 2.2855748,288.21369 v 1.10561"
+           id="path4756"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path4504"
+           d="m 4.1256048,288.21369 v 1.10561"
+           style="fill:none;fill-rule:evenodd;stroke:#b8b8b8;stroke-width:0.30000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           inkscape:label="петля" />
+        <path
+           inkscape:label="петля"
+           style="fill:none;fill-rule:evenodd;stroke:#b8b8b8;stroke-width:0.30000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 5.9656348,288.21369 v 1.10561"
+           id="path4526"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:label="петля"
+           style="fill:none;fill-rule:evenodd;stroke:#b8b8b8;stroke-width:0.30000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 7.7659404,288.21369 v 1.10561"
+           id="path4532"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       id="g4648"
+       inkscape:label="часы"
+       style="stroke:#308aaa;stroke-opacity:1">
+      <circle
+         inkscape:label="контур часов"
+         r="2.3041532"
+         cy="293.8428"
+         cx="7.3666162"
+         id="path4611"
+         style="opacity:1;fill:#000000;fill-opacity:0.00403227;stroke:#b8b8b8;stroke-width:0.33848462;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         inkscape:label="точки часов"
+         id="g4635"
+         style="fill:#b8b8b8;fill-opacity:1;stroke:none;stroke-opacity:1">
+        <circle
+           style="opacity:1;fill:#b8b8b8;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="circle4625"
+           cx="5.7067289"
+           cy="293.8428"
+           r="0.302798"
+           inkscape:label="9ч" />
+        <circle
+           inkscape:label="6ч"
+           r="0.302798"
+           cy="295.49435"
+           cx="7.3666162"
+           id="circle4621"
+           style="opacity:1;fill:#b8b8b8;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <circle
+           inkscape:label="3ч"
+           style="opacity:1;fill:#b8b8b8;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="circle4623"
+           cx="9.0265036"
+           cy="293.8428"
+           r="0.302798" />
+        <circle
+           inkscape:label="12ч"
+           style="opacity:1;fill:#b8b8b8;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path4619"
+           cx="7.3666162"
+           cy="292.19125"
+           r="0.302798" />
+      </g>
+      <path
+         inkscape:label="стрелка часов"
+         inkscape:connector-curvature="0"
+         id="path4627"
+         d="M 7.3666161,293.8428 H 6.431173"
+         style="fill:none;fill-rule:evenodd;stroke:#b8b8b8;stroke-width:0.44999999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:label="стрелка минут"
+         inkscape:connector-curvature="0"
+         id="path4629"
+         d="m 7.3666161,293.8428 1.1707516,-1.17075"
+         style="fill:none;fill-rule:evenodd;stroke:#b8b8b8;stroke-width:0.30000001;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+  </g>
+</svg>
