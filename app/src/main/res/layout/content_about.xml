@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.wyfinger.icleboir.AboutActivity"
+    tools:showIn="@layout/activity_about"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center|top"
+    android:paddingTop="128dp">
+
+    <LinearLayout
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textAboutTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@android:style/TextAppearance.Medium"
+            android:text="@string/about_title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <TextView
+            android:id="@+id/textAboutText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@android:style/TextAppearance.Small"
+            android:text="@string/about_text"
+            app:layout_constraintTop_toBottomOf="@+id/textAboutTitle">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"
+            app:layout_constraintTop_toTopOf="@+id/textAboutText">
+            <Button
+                android:id="@+id/btnDonate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_donate"
+                android:layout_marginRight="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/textAboutText"
+                app:layout_constraintRight_toLeftOf="@+id/btnRank"
+                android:textAllCaps="false"
+                android:onClick="onDonateClick" />
+            <Button
+                android:id="@+id/btnRank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_rank"
+                android:layout_marginLeft="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/textAboutText"
+                app:layout_constraintLeft_toRightOf="@+id/btnDonate"
+                android:textAllCaps="false"
+                android:onClick="onRankClick" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
