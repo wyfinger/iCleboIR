@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background"
+    tools:context="com.wyfinger.icleboir.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnPower"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_default"
+                android:contentDescription="@string/main_power"
+                app:srcCompat="@drawable/ic_btn_power" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btnStart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_default"
+                android:contentDescription="@string/main_start"
+                app:srcCompat="@drawable/ic_btn_start" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btnUp"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_default"
+                android:contentDescription="@string/main_up"
+                app:srcCompat="@drawable/ic_btn_arrow_up" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnLeft"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_default"
+                android:contentDescription="@string/main_left"
+                app:srcCompat="@drawable/ic_btn_arrow_left" />
+
+            <ImageButton
+                android:id="@+id/btnSelect"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_default"
+                android:contentDescription="@string/main_select"
+                app:srcCompat="@drawable/ic_btn_select" />
+
+            <ImageButton
+                android:id="@+id/btnRight"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_default"
+                android:contentDescription="@string/main_right"
+                app:srcCompat="@drawable/ic_btn_arrow_right" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btnAbout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1"
+                android:contentDescription="@string/about_title"
+                android:paddingEnd="0dp"
+                android:paddingStart="8dp"
+                app:srcCompat="@drawable/ic_about" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btnDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@android:drawable/btn_default"
+                    android:contentDescription="@string/main_down"
+                    app:srcCompat="@drawable/ic_btn_arrow_down" />
+
+                <Button
+                    android:id="@+id/btnMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@android:drawable/btn_default"
+                    android:text="@string/main_mode"
+                    android:textAllCaps="false"
+                    android:textColor="@color/mainButtonsTextColor"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/btnSettings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_weight="1"
+                android:contentDescription="@string/scheduler_scheduler"
+                android:paddingEnd="8dp"
+                android:paddingStart="0dp"
+                app:srcCompat="@drawable/ic_shedule" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnClock"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_default"
+                android:text="@string/main_clock"
+                android:textAllCaps="false"
+                android:textColor="@color/mainButtonsTextColor"
+                android:textSize="14sp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btnTimer"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_default"
+                android:text="@string/main_timer"
+                android:textAllCaps="false"
+                android:textColor="@color/mainButtonsTextColor"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnBase"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_default"
+                android:text="@string/main_base"
+                android:textAllCaps="false"
+                android:textColor="@color/mainButtonsTextColor"
+                android:textSize="14sp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btnClimb"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_default"
+                android:text="@string/main_climb"
+                android:textAllCaps="false"
+                android:textColor="@color/mainButtonsTextColor"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSpot"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_default"
+                android:text="@string/main_spot"
+                android:textAllCaps="false"
+                android:textColor="@color/mainButtonsTextColor"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnTurbo"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_default"
+                android:text="@string/main_turbo"
+                android:textAllCaps="false"
+                android:textColor="@color/mainButtonsTextColor"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnMax"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_default"
+                android:text="@string/main_max"
+                android:textAllCaps="false"
+                android:textColor="@color/mainButtonsTextColor"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

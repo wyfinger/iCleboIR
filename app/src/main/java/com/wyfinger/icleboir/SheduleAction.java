@@ -9,6 +9,7 @@ import android.hardware.ConsumerIrManager;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,7 +51,7 @@ class ActionDays implements Parcelable {
         this.sun = sun;
     }
 
-    private ActionDays(Parcel in) {
+    ActionDays(Parcel in) {
         boolean[] daysArray = new boolean[7];
         in.readBooleanArray(daysArray);
         mon = daysArray[0];
@@ -75,7 +76,7 @@ class ActionDays implements Parcelable {
         } else {
             String r = "";
             if (mon) r += App.getAppContext().getResources().getString(R.string.scheduler_monday_short) + " ";
-            if (tue) r += App.getAppContext().getResources().getString(R.string.scheduler_thursday_short) + " ";
+            if (tue) r += App.getAppContext().getResources().getString(R.string.scheduler_tuesday_short) + " ";
             if (wed) r += App.getAppContext().getResources().getString(R.string.scheduler_wednesday_short) + " ";
             if (thu) r += App.getAppContext().getResources().getString(R.string.scheduler_thursday_short) + " ";
             if (fri) r += App.getAppContext().getResources().getString(R.string.scheduler_friday_short) + " ";
@@ -286,6 +287,9 @@ class ActionScript implements Parcelable {
         String ret = "";
         for (int x = 0; x < commands.size(); x = x + 1) {
             ret = ret+ "["+getName(commands.get(x)) + "]";
+        }
+        if (ret == "") {
+            ret = App.getAppContext().getResources().getString(R.string.scheduler_zerocommands);
         }
         return ret;
     }

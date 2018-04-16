@@ -54,4 +54,5 @@
     <string name="scheduler_sunday_short">Sun</string>
     <string name="scheduler_time">Time</string>
     <string name="scheduler_commands">Commands</string>
+    <string name="scheduler_zerocommands">No commands</string>
 </resources>

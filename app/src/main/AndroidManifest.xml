@@ -16,33 +16,38 @@
         android:required="true" />
 
     <application
-        android:name="App"
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+        <!--android:theme="@style/AppTheme">-->
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".AboutActivity"
             android:label="@string/about_title"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ScheduleActivity"
             android:label="@string/scheduler_scheduler"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".NewActionActivity"
             android:label="@string/scheduler_new_action"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <receiver android:name="com.wyfinger.icleboir.ActionReceiver" />
+            android:theme="@style/AppTheme" />
+
+        <receiver android:name=".ActionReceiver" />
+
     </application>
 
 </manifest>

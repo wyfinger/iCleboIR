@@ -26,7 +26,7 @@ public class NewActionActivity extends AppCompatActivity implements View.OnClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        daysOfWeek = new String[] {
+        daysOfWeek = new String[]{
                 getResources().getString(R.string.scheduler_everyday),
                 getResources().getString(R.string.scheduler_workdays),
                 getResources().getString(R.string.scheduler_weekend),
@@ -40,42 +40,58 @@ public class NewActionActivity extends AppCompatActivity implements View.OnClick
         };
 
         setContentView(R.layout.activity_newaction);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
 
         // add back button with arrow to ActionBar
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         // set Views OnClick listeners
-        ((TextView)findViewById(R.id.textDays)).setOnClickListener(this);
+        findViewById(R.id.textDays).setOnClickListener(this);
         (editDays = (TextView) findViewById(R.id.editDays)).setOnClickListener(this);
-        ((TextView)findViewById(R.id.textTime)).setOnClickListener(this);
+        findViewById(R.id.textTime).setOnClickListener(this);
         (editTime = (TextView) findViewById(R.id.editTime)).setOnClickListener(this);
-        ((TextView)findViewById(R.id.textActions)).setOnClickListener(this);
+        findViewById(R.id.textActions).setOnClickListener(this);
         (editActions = (TextView) findViewById(R.id.editActions)).setOnClickListener(this);
 
         // load Action from Intent (blank or Action for edit)
-        action = getIntent().getParcelableExtra(getPackageName()+".action");
+        action = getIntent().getParcelableExtra(getPackageName() + ".action");
         editDays.setText(action.days.toString());
         editTime.setText(action.time.toString());
         editActions.setText(action.script.toString());
         action.enable = true;
 
         // if edit mode change toolbar title
-        if  (getIntent().getIntExtra(getPackageName()+".request",
+        if (getIntent().getIntExtra(getPackageName() + ".request",
                 ScheduleActivity.REQUEST_ADD) == ScheduleActivity.REQUEST_ADD) {
-            getSupportActionBar().setTitle(R.string.scheduler_new_action);
+            //getSupportActionBar().setTitle(R.string.scheduler_new_action);
+            ((TextView) findViewById(R.id.textTitleNewAction)).setText(R.string.scheduler_new_action);
         } else {
-            getSupportActionBar().setTitle(R.string.scheduler_edit_action);
+            //getSupportActionBar().setTitle(R.string.scheduler_edit_action);
+            ((TextView) findViewById(R.id.textTitleNewAction)).setText(R.string.scheduler_edit_action);
         }
 
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        onBackPressed();
-        return false;
+    //@Override
+    //public boolean onSupportNavigateUp() {
+    //    onBackPressed();
+    //    return false;
+    //}
+
+    public void onBackNewActionClick(View v) {
+        finish();
+    }
+
+    public void onOkNewActionClick(View v) {
+        Intent intent = new Intent();
+        if (action.days.isNewer()) {
+            action.enable = false;
+        }
+        intent.putExtra(getPackageName() + ".action", action);
+        setResult(RESULT_OK, intent);
+        finish();
     }
 
     private boolean[] daysChecksSave;
@@ -108,51 +124,71 @@ public class NewActionActivity extends AppCompatActivity implements View.OnClick
                 builder.setTitle(getResources().getString(R.string.scheduler_dayofweek));
                 builder.setCancelable(true);
                 builder.setMultiChoiceItems(daysOfWeek, daysChecks,
-                    new DialogInterface.OnMultiChoiceClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which, boolean isChecked) {
-                            ListView list = ((AlertDialog) dialog).getListView();
-                            switch (which) {
-                                case 0: action.days.setEveryday(isChecked); break;
-                                case 1: action.days.setWorkdays(isChecked); break;
-                                case 2: action.days.setWeekend(isChecked); break;
-                                case 3: action.days.mon = isChecked; break;
-                                case 4: action.days.tue = isChecked; break;
-                                case 5: action.days.wed = isChecked; break;
-                                case 6: action.days.thu = isChecked; break;
-                                case 7: action.days.fri = isChecked; break;
-                                case 8: action.days.sat = isChecked; break;
-                                case 9: action.days.sun = isChecked; break;
+                        new DialogInterface.OnMultiChoiceClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+                                ListView list = ((AlertDialog) dialog).getListView();
+                                switch (which) {
+                                    case 0:
+                                        action.days.setEveryday(isChecked);
+                                        break;
+                                    case 1:
+                                        action.days.setWorkdays(isChecked);
+                                        break;
+                                    case 2:
+                                        action.days.setWeekend(isChecked);
+                                        break;
+                                    case 3:
+                                        action.days.mon = isChecked;
+                                        break;
+                                    case 4:
+                                        action.days.tue = isChecked;
+                                        break;
+                                    case 5:
+                                        action.days.wed = isChecked;
+                                        break;
+                                    case 6:
+                                        action.days.thu = isChecked;
+                                        break;
+                                    case 7:
+                                        action.days.fri = isChecked;
+                                        break;
+                                    case 8:
+                                        action.days.sat = isChecked;
+                                        break;
+                                    case 9:
+                                        action.days.sun = isChecked;
+                                        break;
+                                }
+                                ActionDaysToDaysChecks();
+                                for (int i = 0; i < list.getCount(); ++i) {
+                                    list.setItemChecked(i, daysChecks[i]);
+                                }
                             }
-                            ActionDaysToDaysChecks();
-                            for (int i = 0; i < list.getCount(); ++i) {
-                                list.setItemChecked(i, daysChecks[i]);
-                            }
-                        }
-                    });
+                        });
                 builder.setPositiveButton(getResources().getString(android.R.string.ok),
-                    new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int id) {
-                            // ok
-                            editDays.setText(action.days.toString());
-                        }
-                    });
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int id) {
+                                // ok
+                                editDays.setText(action.days.toString());
+                            }
+                        });
                 builder.setNegativeButton(getResources().getString(android.R.string.cancel),
-                     new DialogInterface.OnClickListener() {
-                         @Override
-                         public void onClick(DialogInterface dialog, int id) {
-                             // cancel, restore days checkboxes
-                             daysChecks = Arrays.copyOf(daysChecksSave, daysChecksSave.length);
-                             action.days.mon = daysChecks[3];
-                             action.days.tue = daysChecks[4];
-                             action.days.wed = daysChecks[5];
-                             action.days.thu = daysChecks[6];
-                             action.days.fri = daysChecks[7];
-                             action.days.sat = daysChecks[8];
-                             action.days.sun = daysChecks[9];
-                         }
-                     });
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int id) {
+                                // cancel, restore days checkboxes
+                                daysChecks = Arrays.copyOf(daysChecksSave, daysChecksSave.length);
+                                action.days.mon = daysChecks[3];
+                                action.days.tue = daysChecks[4];
+                                action.days.wed = daysChecks[5];
+                                action.days.thu = daysChecks[6];
+                                action.days.fri = daysChecks[7];
+                                action.days.sat = daysChecks[8];
+                                action.days.sun = daysChecks[9];
+                            }
+                        });
                 AlertDialog alert = builder.create();
                 alert.show();
                 break;
@@ -180,24 +216,22 @@ public class NewActionActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (data == null) {return;}
+        if (data == null) {
+            return;
+        }
         if ((requestCode == REQUEST_RECORD) & (resultCode == RESULT_OK)) {
             action.script = data.getParcelableExtra(getPackageName() + ".recordScript");
             editActions.setText(action.script.toString());
         }
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.action_ok) {
-            Intent intent = new Intent();
-            if (action.days.isNewer()) { action.enable = false; }
-            intent.putExtra(getPackageName()+".action", action);
-            setResult(RESULT_OK, intent);
-            finish();
-        }
-        return false;
-    }
+    //@Override
+    //public boolean onOptionsItemSelected(MenuItem item) {
+    //    if (item.getItemId() == R.id.action_ok) {
+    //
+    //    }
+    //    return false;
+    //}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

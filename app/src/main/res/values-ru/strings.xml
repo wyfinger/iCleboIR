@@ -37,4 +37,5 @@
     <string name="scheduler_sunday_short">Вс</string>
     <string name="scheduler_time">Время</string>
     <string name="scheduler_commands">Команды</string>
+    <string name="scheduler_zerocommands">Нет комманд</string>
 </resources>

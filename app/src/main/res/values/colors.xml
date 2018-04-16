@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#000000</color>
+    <color name="mainButtonsTextColor">#000000</color>
+    <!--<color name="colorPrimary">#000000</color>
     <color name="colorPrimaryDark">#b8b8b8</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#FFFFFF</color>
     <color name="colorBtnPressed">#4099ff</color>
     <color name="colorBtnFocused">#96c7ff</color>
-    <color name="colorBtnDefault">#d4e8ff</color>
+    <color name="colorBtnDefault">#d4e8ff</color>-->
 </resources>

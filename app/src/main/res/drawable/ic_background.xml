@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
-    android:src="@drawable/pi_background"
-    android:tileMode="repeat" />
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+            android:src="@drawable/pi_background"
+            android:tileMode="repeat" />
+    </item>
+    <item android:drawable="@drawable/pi_gradient_left" android:gravity="left" />
+    <item android:drawable="@drawable/pi_gradient_right" android:gravity="right" />
+</layer-list>

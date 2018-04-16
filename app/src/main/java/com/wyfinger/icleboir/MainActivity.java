@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         manager = (ConsumerIrManager) this.getSystemService(CONSUMER_IR_SERVICE);
 
         // record mode
-        recMode = ("record" == getIntent().getAction());
+        recMode = ("record".equals(getIntent().getAction()));
 
         ImageView btnAbout = (ImageView) findViewById(R.id.btnAbout);
         ImageView btnSettings = (ImageView) findViewById(R.id.btnSettings);

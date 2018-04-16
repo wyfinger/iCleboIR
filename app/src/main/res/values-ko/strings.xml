@@ -37,4 +37,5 @@
     <string name="scheduler_sunday_short">Sun</string>
     <string name="scheduler_time">시간</string>
     <string name="scheduler_commands">명령을</string>
+    <string name="scheduler_zerocommands">명령 없음</string>
 </resources>
